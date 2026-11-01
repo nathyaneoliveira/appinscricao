@@ -51,7 +51,7 @@ O cliente de demonstração criado pela migration tem o UUID
 ```powershell
 curl.exe -X POST http://localhost:8080/compras/simular `
   -H "Content-Type: application/json" `
-  -d '{\"valorUSD\":200.00}'
+  -d '{"valorUSD":200.00}'
 ```
 
 ### Registrar compra
@@ -59,7 +59,7 @@ curl.exe -X POST http://localhost:8080/compras/simular `
 ```powershell
 curl.exe -X POST http://localhost:8080/compras `
   -H "Content-Type: application/json" `
-  -d '{\"clienteId\":\"11111111-1111-4111-8111-111111111111\",\"valorUSD\":200.00}'
+  -d '{"clienteId":"11111111-1111-4111-8111-111111111111","valorUSD":200.00}'
 ```
 
 A API consulta a cotação `ask` atual; não aceite cotação enviada no corpo. A
