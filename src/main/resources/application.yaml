@@ -1,0 +1,27 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  application:
+    name: appinscricao
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL:jdbc:mysql://localhost:3306/inscricoes-db?createDatabaseIfNotExist=true}
+    username: ${DB_USERNAME:appinscricao}
+    password: ${DB_PASSWORD:}
+  jpa:
+    #hibernate:
+      #ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+integrations:
+  viacep:
+    url: https://viacep.com.br
+  awesomeapi:
+    url: https://economia.awesomeapi.com.br
+
+api:
+  security:
+    token:
+      secret: ${API_TOKEN_SECRET:local-development-secret}

@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:appinscricao-test;MODE=MySQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  flyway:
+    enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+integrations:
+  viacep:
+    url: https://viacep.com.br
+  awesomeapi:
+    url: https://economia.awesomeapi.com.br
+
+api:
+  security:
+    token:
+      secret: test-secret
